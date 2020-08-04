@@ -1,0 +1,391 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <style>
+  input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus{
+  -webkit-text-fill-color: #6ABED8;
+  -webkit-box-shadow: 0 0 0px 1000px #141414 inset;
+}
+
+  body{
+    background-color: #141414;
+  }
+  .greeting{
+    margin-left: 35px;
+    padding-top: 30px;
+    font-family:'All the Way to the Sun';
+    color: #6ABED8;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+.bt1{
+  align-items: center;
+  margin-top:-15px;
+  padding: 10px 20px;
+  color: black;
+  border-style: solid;
+  border-color: #6ABED8;
+  border-radius: 3px;
+  border-width: 3px;
+  background-color: #6ABED8;
+  font-family: 'Roboto Mono'
+}
+
+.box1{
+  margin-top: 85px;
+  background-color: Transparent;
+  color: #6ABED8;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-color: #6ABED8;
+  padding: 30px;
+  font-family: 'Roboto Mono';
+}
+h1{
+  color: white;
+  margin-top: 100px;
+  font-family: 'Roboto Mono';
+  font-size: 25px;
+  margin-left: 30px;
+}
+.cat{
+  color: white;
+  padding: 20px 40px;
+  width: 200px;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: Transparent;
+  border-color: White;
+}
+.cat:hover{
+  color: black;
+  background-color:#6ABED8;
+}
+li{
+  margin-left: -10px;
+  padding: 20px;
+}
+ul{
+  list-style: none;
+    display: inline-block;
+}
+.hor{
+  display: inline-block;
+}
+.cat1{
+  color: white;
+  padding: 20px 40px;
+  width: 200px;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: Transparent;
+  border-color: #6ABED8;
+}
+.cat1:hover{
+
+  color: black;
+  background-color:#6ABED8;
+  border-color: none;
+}
+.ansStyle{
+  color: white;
+  padding: 20px 40px;
+  width: 200px;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: Transparent;
+  border-color: #6ABED8;
+}
+.ansStyle:hover{
+  background-color: #6ABED8;
+  color: black;
+}
+button:hover span {display:none}
+#bt1a:hover:before { content:'10 Points!'}
+#bt2a:hover:before { content:'10 Points!'}
+#bt3a:hover:before { content:'10 Points!'}
+#bt4a:hover:before { content:'10 Points!'}
+#bt5a:hover:before { content:'10 Points!'}
+#bt6a:hover:before { content:'10 Points!'}
+#bt7a:hover:before { content:'10 Points!'}
+#bt8a:hover:before { content:'10 Points!'}
+#bt9a:hover:before { content:'10 Points!'}
+#bt10a:hover:before { content:'10 Points!'}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 10px;
+    background-color: #6ABED8;
+    text-align: center;
+    padding-top:10px;
+    margin-top: -10px;
+    font-family: 'All the Way to the Sun';
+}
+.scoreMini{
+  font-size: 13px;
+}
+.scoreBig{
+  font-size: 20px;
+}
+.bluebg{
+  align-items: center;
+  padding: 0px;
+  font-family: 'All the Way to the Sun';
+}
+.btnext{
+  color: white;
+  padding: 20px 40px;
+  width: 200px;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: Transparent;
+  border-color: #6ABED8;
+  font-family: 'Roboto Mono';
+
+}
+.btnext:hover{
+
+    color: black;
+    background-color:#6ABED8;
+    border-color: none;
+}
+.scoreL{
+  margin-top: -10px;
+}
+.cat1:visited{
+  pointer-events: none;
+}
+.doneButton{
+  color: black;
+  padding: 20px 40px;
+  width: 400px;
+  margin-top: -90px;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: #6ABED8;
+  border-color: white;
+  font-family: 'Roboto Mono';
+}
+.doneButton:hover{
+  color: White;
+  background-color: Transparent;
+
+}
+.box2{
+  width: 200px;
+   margin-top: 85px;
+  background-color: Transparent;
+  color: #6ABED8;
+  align-items: center;
+  text-align: center;
+  border-style: solid;
+  border-color: #6ABED8;
+  padding: 30px;
+  font-family: 'Roboto Mono';
+}
+  </style>
+</head>
+<body>
+<center>
+    <p class="greeting"> {{ greeting }} </p>
+  {% if mode==1 %}
+
+  <form method=post action='/choose'
+  <div class="main1">
+    <input type='text' name='name' onfocus="this.value=''" value="( Enter Name )" class="box1">
+    <br>
+    <input type='submit' value='Submit' class="bt1">
+  </form>
+
+  </div>
+  {% endif %}
+
+  {% if mode == 2%}
+
+  <h1>{{stage}} </h1>
+
+    <form method=get action="/animals"><ul>
+      <li>  <input type = "submit" value = "Animals" class="cat"></li>
+    </ul>
+    </form>
+
+    <form method=get action="/code"><ul>
+
+      <li>  <input type = "submit" value = "Code" class="cat"></li>
+    </ul>
+    </form>
+
+    <form method=get action="/slogans"><ul>
+      <li><input type = "submit" value = "Slogans" class="cat"></li>
+    </ul>
+  </form>
+    <br>
+    <form method=get action="/done"><ul>
+      <li><input type = "submit" value = "Give Up?" class="doneButton"></li>
+    </ul>
+    </form>
+
+
+  {%endif%}
+
+  </center>
+
+  {% if mode == 3 %}
+<center>
+  <h1> {{level}}</h1>
+
+</center>
+  <form method=get action='/animalQuestions'>
+    <center>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level1" class="cat1" id = 'bt1a'><span>Question 1</span></li></ul></button>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level2" class="cat1" id = 'bt2a'><span>Question 2</span></li></ul>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level3" class="cat1" id = 'bt3a'><span>Question 3</span></li></ul>
+    <ul class="hori"><li><button type = "submit" name="id" value = "level4" class="cat1" id = 'bt4a'><span>Question 4</span></li></ul>
+    <ul class="hori"><li><button type = "submit" name="id" value = "level5" class="cat1" id = 'bt5a'><span>Question 5</span></li></ul>
+    <br>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level6" class="cat1" id = 'bt6a'><span>Question 6</span></li></ul>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level7" class="cat1" id = 'bt7a'><span>Question 7</span></li></ul>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level8" class="cat1" id = 'bt8a'><span>Question 8</span></li></ul>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level9" class="cat1" id = 'bt9a'><span>Question 9</span></li></ul>
+    <ul class="hori"><li><button  type = "submit" name="id" value = "level10" class="cat1" id = 'bt10a'><span>Question 10</span></li></ul>
+  </form>
+</center>
+{%endif%}
+
+{% if mode == 4 %}
+  <form method=post action="/animalQuestions">
+<center> <h1>{{question}}</h1>
+    <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans1}} class="ansStyle" >{{ans1}} </li></ul>
+    <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans2}} class="ansStyle">{{ans2}} </li></ul>
+      <br>
+    <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans3}} class="ansStyle">{{ans3}} </li></ul>
+    <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans4}} class="ansStyle" >{{ans4}} </li></ul>
+      </form>
+      <div class="footer">
+        <p class="scoreMini"> Your Score</p>
+      <h2 class='scoreBig'>{{ score }} </h2>
+      </div>
+
+  </center>
+{%endif%}
+
+{% if mode == 5%}
+<center>
+<h1> {{level}} </h1>
+<h1> {{question}} </h1>
+</center>
+<center>
+<form method=get action='/codingQuestions'>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level1" class="cat1" id = 'bt1a'><span>Question 1</span></li></ul></button>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level2" class="cat1" id = 'bt2a'><span>Question 2</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level3" class="cat1" id = 'bt3a'><span>Question 3</span></li></ul>
+  <ul class="hori"><li><button type = "submit" name="id" value = "level4" class="cat1" id = 'bt4a'><span>Question 4</span></li></ul>
+  <ul class="hori"><li><button type = "submit" name="id" value = "level5" class="cat1" id = 'bt5a'><span>Question 5</span></li></ul>
+  <br>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level6" class="cat1" id = 'bt6a'><span>Question 6</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level7" class="cat1" id = 'bt7a'><span>Question 7</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level8" class="cat1" id = 'bt8a'><span>Question 8</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level9" class="cat1" id = 'bt9a'><span>Question 9</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level10" class="cat1" id = 'bt10a'><span>Question 10</span></li></ul>
+
+</form>
+</center>
+{% endif %}
+
+{% if mode == 6 %}
+  <form method=post action="/codingQuestions">
+    <center> <h1>{{question}}</h1>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans1}} class="ansStyle" >{{ans1}} </li></ul>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans2}} class="ansStyle">{{ans2}} </li></ul>
+          <br>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans3}} class="ansStyle">{{ans3}} </li></ul>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans4}} class="ansStyle" >{{ans4}} </li></ul>
+          </form>
+          <div class="footer">
+            <p class="scoreMini"> Your Score</p>
+          <h2 class='scoreBig'>{{ score }} </h2>
+          </div>
+
+      </center>
+{%endif%}
+
+{% if mode == 7%}
+<center>
+<h1> {{level}} </h1>
+<h1> {{question}} </h1>
+</center>
+<center>
+<form method=get action='/sloganQuestions'>
+
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level1" class="cat1" id = 'bt1a'><span>Question 1</span></li></ul></button>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level2" class="cat1" id = 'bt2a'><span>Question 2</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level3" class="cat1" id = 'bt3a'><span>Question 3</span></li></ul>
+  <ul class="hori"><li><button type = "submit" name="id" value = "level4" class="cat1" id = 'bt4a'><span>Question 4</span></li></ul>
+  <ul class="hori"><li><button type = "submit" name="id" value = "level5" class="cat1" id = 'bt5a'><span>Question 5</span></li></ul>
+  <br>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level6" class="cat1" id = 'bt6a'><span>Question 6</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level7" class="cat1" id = 'bt7a'><span>Question 7</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level8" class="cat1" id = 'bt8a'><span>Question 8</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level9" class="cat1" id = 'bt9a'><span>Question 9</span></li></ul>
+  <ul class="hori"><li><button  type = "submit" name="id" value = "level10" class="cat1" id = 'bt10a'><span>Question 10</span></li></ul>
+
+</form>
+</center>
+{% endif %}
+
+{% if mode == 8 %}
+  <form method=post action="/sloganQuestions">
+    <center> <h1>{{question}}</h1>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans1}} class="ansStyle" >{{ans1}} </li></ul>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans2}} class="ansStyle">{{ans2}} </li></ul>
+          <br>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans3}} class="ansStyle">{{ans3}} </li></ul>
+        <ul class="hori"><li><button  type = "submit" name="ans" value = {{ans4}} class="ansStyle" >{{ans4}} </li></ul>
+          </form>
+          <div class="footer">
+            <p class="scoreMini"> Your Score</p>
+          <h2 class='scoreBig'>{{ score }} </h2>
+          </div>
+
+      </center>
+{%endif%}
+
+{% if mode == 9 %}
+<center>
+  <div class = 'bluebg'>
+  <h1>{{selected_answer}}</h1>
+  <h1 class = 'scoreL'> Your Score is now : {{score}}</h1>
+  <form method=post action='/choose'>
+    <button type='submit' value='Next Question' class='btnext'>Next Question
+  </form>
+</div>
+</center>
+{%endif%}
+
+
+{% if mode == 10 %}
+<center><div class="box2">
+<h4> Thanks for playing <br>
+  {{ player }}
+  <br> Your score: {{ score }}</h4>
+
+</center>
+</div>
+{%endif%}
+
+</body>
+
+</html>
